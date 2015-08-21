@@ -27,6 +27,16 @@ development:
 #test:
 #  <<: *default
 #  database: db/test.sqlite3
+test:
+  adapter: mysql2
+  database: sample_app
+  pool: 5
+  username: root
+  password: 'whb'
+  encoding: utf8
+  host: localhost
+
+
 
 #production:
 #  <<: *default
