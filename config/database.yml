@@ -34,6 +34,7 @@ test:
   username: root
   password: 'whb'
   encoding: utf8
+  strict: false
   host: localhost
 
 
