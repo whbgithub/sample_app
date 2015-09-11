@@ -29,7 +29,7 @@ development:
 #  database: db/test.sqlite3
 test:
   adapter: mysql2
-  database: sample_app
+  database: gm-whb
   pool: 5
   username: root
   password: 'whb'

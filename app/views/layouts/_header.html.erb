@@ -9,10 +9,10 @@
 <% if logged_in? %>
 <li><%= link_to "Users", '#' %></li>
 <li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 Account <b class="caret"></b>
 </a>
-<ul class="dropdown-menu">
+<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 <li><%= link_to "Profile", current_user %></li>
 <li><%= link_to "Settings", '#' %></li>
 <li class="divider"></li>
@@ -26,5 +26,15 @@ Account <b class="caret"></b>
 <% end %>
 </ul>
 </nav>
+<script>
+$(function() {
+		  $(".dropdown-menu li a").bind("click", function() {
+			      var $this = $(this);
+			          var $a = $this.parent().parent().prev()
+				      $a.text($this.text());
+				          $a.append("<span class='caret'>");
+					      });
+		    });
+</script>
 </div>
 </header>

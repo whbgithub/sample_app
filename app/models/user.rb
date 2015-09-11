@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
  attr_accessor :remember_token
- validates :name, presence: true,length: { maximum: 50 }
+ validates :name, presence: { message:  '不能为空' }, length: { maximum: 15, message: '太长了' }
  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
  validates :email, presence: true, length: { maximum: 255 },
 #validates :password, length: { maximum: 6 },
